@@ -31,7 +31,6 @@ provider "google" {
 resource "google_compute_instance" "nginx-dns" {
  name         = "nginx-dns"
  machine_type = "f1-micro"  # 0.6 GB RAM
- # machine_type = "g1-small"  # 1.7 GB RAM
  zone         = "${var.region}-b"
 
  tags = [ "nginx-dns" ]
